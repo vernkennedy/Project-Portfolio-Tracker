@@ -1,0 +1,17 @@
+Project Portfolio Tracker
+                                                             An An application that allows a software company to track and monitor information on all projects from a central location. It houses the complete list of all current and past projects. 
+
+Each project has its detailed description, project category, estimated duration, estimated cost, business objective,and number of  issues. 
+
+Also included are reporting features so management gets a snapshot of the company’s project portfolio and will be able to review or reevaluate project priorities, see what projects provide the greatest value add to the company.
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------
