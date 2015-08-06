@@ -1,22 +1,19 @@
 <?php
+	session_start();
+	$host = "localhost";
+	$user = "root";
+	$pass = "";
+	$name = "dblogin";
 
-session_start();
+	try
+		{
+			$DB_con = new PDO("mysql:host={$host};dbname={$name}",$user,$pass);
+			$DB_con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		}
+	catch(PDOException $e){
+		echo $e->getMessage();
+	}
 
-$DB_host = "localhost";
-$DB_user = "root";
-$DB_pass = "";
-$DB_name = "dblogin";
-
-try
-{
-	$DB_con = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
-	$DB_con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch(PDOException $e)
-{
-	echo $e->getMessage();
-}
-
-
-include_once 'class.user.php';
-$user = new USER($DB_con);
+	include_once 'class.user.php';
+	$user = new USER($DB_con);
+?>

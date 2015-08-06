@@ -13,4 +13,4 @@ if(isset($_GET['logout']) && $_GET['logout']=="true")
 if(!isset($_SESSION['user_session']))
 {
 	$user->redirect('index.php');
-}
+} 

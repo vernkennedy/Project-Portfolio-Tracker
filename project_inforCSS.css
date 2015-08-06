@@ -1,0 +1,9 @@
+	#left{width:700px; height:500px; float:left; margin-left:150px;}
+	#right{width:300px; height:500px; float:right; margin-right:150px;}
+	h4{border:1px solid silver; border-radius:5px; padding:5px; background:#E3E3E3; border-bottom:1px solid silver;}
+	#right>h4,h1{border:0px solid silver; background:#E3E3E3;}
+	h1{position:fixed; margin-top:-8px; width:100%; margin-left:-8px; padding:8px; background:white; border-bottom:1px solid silver; }
+	button{border:1px solid silver; font-weight:bold; padding:10px; background:white; margin-left:280px; border-radius:5px; position:fixed; bottom:620px;}
+	button>a{color:black; text-decoration:none; }
+	#back{border:1px solid silver; font-weight:bold; padding:10px; background:white; margin-left:-700px; border-radius:5px; position:fixed; bottom:620px;}
+	#back>a		

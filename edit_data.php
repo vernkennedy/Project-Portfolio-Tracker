@@ -7,7 +7,7 @@ if(isset($_GET['edit_id']))
  $fetched_row=mysql_fetch_array($result_set);
 }
 if(isset($_POST['btn-update']))
-{
+{ 
  // variables for input data
  $projectName = $_POST['projectName'];
  $projectType = $_POST['projectType'];
@@ -25,7 +25,7 @@ if(isset($_POST['btn-update']))
  if(mysql_query($sql_query))
  {
   ?>
-  <script type="text/javascript">
+  <script>
   alert('Data Are Updated Successfully');
   window.location.href='index2.php';
   </script>
@@ -34,7 +34,7 @@ if(isset($_POST['btn-update']))
  else
  {
   ?>
-  <script type="text/javascript">
+  <script>
   alert('error occured while updating data');
   </script>
   <?php
@@ -46,66 +46,74 @@ if(isset($_POST['btn-cancel']))
  header("Location: index2.php");
 }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CRUD Operations With PHP and MySql</title>
-<link rel="stylesheet" href="tyle.css" type="text/css" />
-</head>
-<body>
-<center>
 
-<div id="header">
- <div id="content">
-    <label>Edit your data </label>
-    </div>
-</div>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>edit data</title>
+		<link rel="stylesheet" href="edit_dataCSS.css" type="text/css" />
+	</head>
+	
+	<body>
+	
+			<div id="header">
+			 <div id="content">
+				<h2>Edit your data </h2>
+			 </div>
+			</div>
 
-<div id="body">
- <div id="content">
-    <form method="post">
-    <table align="center">
-    <tr>
-    <td>Project Name<br><input type="text" name="projectName" placeholder="Project" value="<?php echo $fetched_row['projectName']; ?>" required /></td>
-    </tr>
-    <tr>
-    <td>Project Type<br>
-	<input type="radio" name="projectType" placeholder="Current" value="Current" required/>Current Project
-	<input type="radio" name="projectType" placeholder="Past" value="Past" required />Past Project	</td>
-    </tr>
-    <tr>
-    <td>Cost<br><input type="text" name="cost" placeholder="Cost" value="<?php echo $fetched_row['cost']; ?>" required /></td>
-    </tr>
-	<tr>
-    <td>Duration<br><input type="text" name="duration" placeholder="Duration" value="<?php echo $fetched_row['duration']; ?>" required /></td>
-    </tr>
-	<tr>
-    <td>Number of issues<br><input type="text" name="issues" placeholder="Issues" value="<?php echo $fetched_row['issues']; ?>" required /></td>
-    </tr>
-	<tr>
-    <td>Completed (true or false)<br>
-	<input type="radio" name="completed" placeholder="Completed" value="true" required/>Yes
-	<input type="radio" name="completed" placeholder="Completed" value="false" required />Not completed
-	</td>
-    </tr>
-	<tr>
-    <td>Business Objective<br><input  rows="4" cols="50"type="text" name="objective" placeholder="Objective" value="<?php echo $fetched_row['objective']; ?>" required /></td>
-    </tr>
-	<tr>
-    <td>Description<br><input type="text" name="description" placeholder="Description" value="<?php echo $fetched_row['description']; ?>" required /></td>
-    </tr>
-    <tr>
-    <td>
-    <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
-    <button type="submit" name="btn-cancel"><strong>Cancel</strong></button>
-    </td>
-    </tr>
-    </table>
-    </form>
-    </div>
-</div>
-
-</center>
-</body>
+			<div id="body">
+			 <div id="content">
+				<form method="post">
+					<table align="center">
+						<tr>
+							<td>Project Name<br><input type="text" name="projectName" placeholder="Project" value="<?php echo $fetched_row['projectName']; ?>" required /></td>
+						</tr>
+						
+						<tr>
+							<td>Project Type<br>
+							<input type="radio" name="projectType" placeholder="Current" value="Current" required/>Current Project
+							<input type="radio" name="projectType" placeholder="Past" value="Past" required />Past Project	</td>
+						</tr>
+						
+						<tr>
+							<td>Cost<br><input type="text" name="cost" placeholder="Cost" value="<?php echo $fetched_row['cost']; ?>" required /></td>
+						</tr>
+						
+						<tr>
+							<td>Duration<br><input type="text" name="duration" placeholder="Duration" value="<?php echo $fetched_row['duration']; ?>" required /></td>
+						</tr>
+						
+						<tr>
+							<td>Number of issues<br><input type="text" name="issues" placeholder="Issues" value="<?php echo $fetched_row['issues']; ?>" required /></td>
+						</tr>
+						
+						<tr>
+							<td>Completed (true or false)<br>
+							<input type="radio" name="completed" placeholder="Completed" value="true" required/>Yes
+							<input type="radio" name="completed" placeholder="Completed" value="false" required />Not completed
+							</td>
+						</tr>
+						
+						<tr>
+							<td>Business Objective<br><input  rows="4" cols="50"type="text" name="objective" placeholder="Objective" value="<?php echo $fetched_row['objective']; ?>" required /></td>
+						</tr>
+						
+						<tr>
+							<td>Description<br><input type="text" name="description" placeholder="Description" value="<?php echo $fetched_row['description']; ?>" required /></td>
+						</tr>
+						
+						<tr>
+							<td>
+							<button type="submit" name="btn-update"><strong>Update</strong></button>
+							<button type="submit" name="btn-cancel"><strong>Cancel</strong></button>
+							</td>
+						</tr>
+					</table>
+				</form>
+			 </div>
+			</div>
+		
+	</body>
 </html>

@@ -1,0 +1,13 @@
+
+	body{overflow:hidden;}
+h4 a{color:black;text-decoration:none; }
+a{color:black;}
+h4{border:1px solid silver; border-radius:3px; padding:5px; width:140px; margin-left:-15.5px;}
+piechart{width:900px; height:560px; overflowX:hidden; overflow-y:hidden; border:4px solid white; }
+#graph{width:1339px; height:540px; overflowX:hidden; overflow-y:idden; border:4px solid white; position:relative; bottom:15.5px;}
+
+h3{ackground:white; border:0px solid silver; text-align:center; top:15px;}
+#budget,#status{position:relative; ottom:840px; width:200px; margin-left:0px; padding:10px;}
+#status{margin-left:0px; ottom:900px;}
+#header{ background:#FCFCFC; border-bottom:1px solid silver; bottom:600px; width:100%; padding:20px; margin-left:-10px; position:fixed; text-align:center;}
+#header>h3{position:relative; top:10px;}
